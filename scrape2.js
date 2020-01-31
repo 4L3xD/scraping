@@ -8,6 +8,24 @@ request('https://www.prontocombustiveis.com.br/', (error, response, html) => {
         const frases = $('.frases');
 
         // console.log(frases);
-        console.log(frases.html());
+        
+        // console.log(frases.text());
+        
+        // const output = frases.find('b').text();
+        
+        // const output = frases.children('b').text();
+        // console.log(output);
+
+        // const output = frases.children('br')
+        // .next()
+        // .text();
+        
+        // console.log(output);
+
+        const output = frases.children('br')
+        .next()
+        .text();
+        
+        console.log(output);
     }
 });
